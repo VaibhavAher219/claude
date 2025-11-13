@@ -7,6 +7,20 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
 
+    <!-- Video recording permissions -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- Calendar integration permissions -->
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+
+    <!-- Notification permissions -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- Reminder/Alarm permissions -->
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+
     <queries>
         <intent>
             <action android:name="android.speech.RecognitionService" />
@@ -33,6 +47,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Reminder broadcast receiver for notifications -->
+        <receiver
+            android:name=".service.ReminderBroadcastReceiver"
+            android:enabled="true"
+            android:exported="false" />
     </application>
 
 </manifest>
