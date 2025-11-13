@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">सखी</string>
+    <string name="chat_title">सखी AI</string>
+    <string name="type_message">तुमचा संदेश टाइप करा…</string>
+    <string name="send">पाठवा</string>
+    <string name="welcome_message">नमस्कार! मी सखी आहे, तुमची AI सहाय्यक. आज मी तुम्हाला कशी मदत करू शकते?</string>
+    <string name="no_messages">अद्याप कोणतेही संदेश नाहीत. संभाषण सुरू करा!</string>
+    <string name="error_empty_message">कृपया संदेश प्रविष्ट करा</string>
+    <string name="clear_chat">चॅट साफ करा</string>
+    <string name="settings">सेटिंग्ज</string>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sakhi</string>
+    <string name="chat_title">Sakhi AI</string>
+    <string name="type_message">Type your message…</string>
+    <string name="send">Send</string>
+    <string name="welcome_message">Hello! I am Sakhi, your AI assistant. How can I help you today?</string>
+    <string name="no_messages">No messages yet. Start a conversation!</string>
+    <string name="error_empty_message">Please enter a message</string>
+    <string name="clear_chat">Clear Chat</string>
+    <string name="settings">Settings</string>
+</resources>
