@@ -44,7 +44,7 @@ interface OpenAIApi {
 }
 
 class OpenAIService(private val apiKey: String) {
-    private val api: OpenAIApi
+    val api: OpenAIApi
 
     init {
         val loggingInterceptor = HttpLoggingInterceptor().apply {

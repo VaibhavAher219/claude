@@ -12,14 +12,10 @@ import com.sakhi.chat.data.PreferencesManager
 import com.sakhi.chat.navigation.SakhiNavigation
 import com.sakhi.chat.repository.FirebaseRepository
 import com.sakhi.chat.ui.theme.SakhiTheme
-import com.sakhi.chat.viewmodel.ChatViewModel
-import kotlinx.coroutines.flow.first
-import kotlinx.coroutines.runBlocking
 
 class MainActivity : ComponentActivity() {
     private lateinit var firebaseRepository: FirebaseRepository
     private lateinit var preferencesManager: PreferencesManager
-    private lateinit var chatViewModel: ChatViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,14 +23,6 @@ class MainActivity : ComponentActivity() {
         // Initialize repositories
         firebaseRepository = FirebaseRepository()
         preferencesManager = PreferencesManager(applicationContext)
-
-        // Initialize ViewModel
-        chatViewModel = ChatViewModel(
-            firebaseRepository = firebaseRepository,
-            apiKeyProvider = {
-                preferencesManager.apiKeyFlow.first()
-            }
-        )
 
         setContent {
             SakhiTheme {
@@ -46,8 +34,7 @@ class MainActivity : ComponentActivity() {
                     SakhiNavigation(
                         navController = navController,
                         firebaseRepository = firebaseRepository,
-                        preferencesManager = preferencesManager,
-                        chatViewModel = chatViewModel
+                        preferencesManager = preferencesManager
                     )
                 }
             }
